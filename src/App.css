@@ -1,0 +1,16 @@
+.app {
+  text-align: center;
+}
+.app-header {
+  color: black;
+  padding: 50px;
+  align-items: center;
+  border-bottom: 2px grey solid;
+  flex-direction: row;
+}
+.header-wrap {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}

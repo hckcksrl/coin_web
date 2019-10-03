@@ -1,12 +1,9 @@
 import React, {Component} from "react";
-
+import "./header.css"
 
 class Header extends Component{
-
-
-
     render(){
-        return (<div><h1 style={{margin:0}}>qwe</h1></div>)  
+        return (<div className="header"><h1>CoinTicker</h1></div>)  
     }
 }
 
