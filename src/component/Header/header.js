@@ -18,9 +18,9 @@ class Header extends Component {
             <NavLink to="/korbit">코빗</NavLink>
           </div>
           <div className="header-search">
-            <form>
-              <input type="text" placeholder="Search" style={{ marginRight: 10, padding: 5, borderRadius: 5, width: '10em', height: '2em' }} />
-              <button style={{ width: '5em', borderRadius: 5 }}>Search</button>
+            <form className="header-form">
+              <input type="text" placeholder="Search" className="search" />
+              <button className="button button4">Search</button>
             </form>
           </div>
         </div>

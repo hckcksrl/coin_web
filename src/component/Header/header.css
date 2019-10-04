@@ -16,7 +16,8 @@ header{
 header a {
   color: black;
   font-family: sans-serif;
-  font-weight: 700
+  font-weight: 700;
+  text-decoration: none
 }
 .header-logo {
   margin-left: 20px;
@@ -33,24 +34,50 @@ header a {
   justify-content: flex-end;
   align-items: center;
 }
-.header-search{
-  display: flex;
-  justify-content: flex-end;
-  align-items: center
-}
 .header-coin a {
   margin-right: 20px;
   font-size: 1em;
 }
-.search{
-  margin-right: 10;
-  padding:5;
-  border-radius: 5;
-  width:5em;
-  height:1em;
-}
-.search-button{
-  width:2em;
-  height:1em;
+.header-search{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 0em;
+  box-sizing: border-box;
 
 }
+.header-form{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.search{
+  margin-right: .5rem;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+}
+.button {
+  top:0;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+}
+.button4 {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
