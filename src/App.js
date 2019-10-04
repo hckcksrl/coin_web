@@ -1,19 +1,21 @@
 import React from 'react';
 import Header from './component/Header/header';
 import "./App.css"
-import Navigate from './component/Navigation/Navigation';
-
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Home from "./component/Home"
+import Footer from './component/Footer/footer';
 
 function App() {
   return (
-    <div className="app">
-      <div className="app-header">
-        <div className='header-wrap'>
-          <div><Header /></div>
-          <div style={{display:'flex', flexDirection:'row-reverse'}}><Navigate /></div>
-        </div>   
+    <Router>
+      <div className="app">
+        <Header />
+        <section style={{ height: '100%' }}>
+          <Route exact={true} path="/" component={Home} />
+        </section>
+        <Footer />
       </div>
-    </div>
+    </Router>
   );
 }
 

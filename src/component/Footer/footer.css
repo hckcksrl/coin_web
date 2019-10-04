@@ -1,0 +1,30 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 100;
+    font-size: 0.8rem;
+    border-top: 1px solid lightgray;
+    height: 100px
+}
+
+.footer p,a{
+    font-size: 2em
+}
+
+.footer p:first-child {
+    margin-bottom: -10px;
+}
+
+
+.footer a {
+    text-decoration: none;
+}
+.footer a:visited {
+    color: black;
+}
+.footer a:hover {
+    text-decoration: underline;
+    color: darkblue;
+}
