@@ -17,7 +17,7 @@ class Home extends Component {
 
     componentDidMount() {
         this.getCoin();
-        // this.interval = setInterval(() => this.fetchCryptocurrencyData(), 60 * 1000);
+        this.interval = setInterval(() => this.getCoin(), 10 * 1000);
     }
 
     getCoin() {
@@ -56,12 +56,25 @@ class Home extends Component {
     }
 
     render() {
-        console.log(this.state)
+        let { bithumb, korbit, upbit, coinone } = this.state
         return (
             <div className='main'>
-                <div><Main></Main></div>
-                <div><Main></Main></div>
-                <div><Main></Main></div>
+                <div style={{ flex: 1, marginRight: '25px' }}><p>빗썸</p>{
+                    bithumb.map((coin, index) => {
+                        return <Main data={coin} key={index}></Main>
+                    })}</div>
+                <div style={{ flex: 1, marginRight: '25px' }}><p>업비트</p>{
+                    upbit.map((coin, index) => {
+                        return <Main data={coin} key={index}></Main>
+                    })}</div>
+                <div style={{ flex: 1, marginRight: '25px' }}><p>코인원</p>{
+                    coinone.map((coin, index) => {
+                        return <Main data={coin} key={index}></Main>
+                    })}</div>
+                <div style={{ flex: 1, marginRight: '25px' }}><p>코빗</p>{
+                    korbit.map((coin, index) => {
+                        return <Main data={coin} key={index}></Main>
+                    })}</div>
             </div >
         );
     }
