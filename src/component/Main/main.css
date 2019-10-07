@@ -1,6 +1,9 @@
 .coin-wrap{
+    width: 300px;
+    height: 400px; 
+    margin-right: 25px;
+    margin-bottom: 30px;
     display: flex;
-    width: 100%;
-    margin-bottom: 30px; 
-    flex-direction: row
+    flex-direction: column;
+    align-items: center
 }

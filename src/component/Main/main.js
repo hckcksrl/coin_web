@@ -15,25 +15,28 @@ class Main extends Component {
     }
 
     render() {
-        return (
-            <div className="coin-wrap">
-                < div style={{ flex: 1, height: '400px', marginRight: '25px' }}>
-                    <div>
-                        <p>a</p>
-                    </div>
+        return (<>
+            < div className='coin-wrap'>
+                <div>
+                    <p>a</p>
                 </div>
-                < div style={{ flex: 1, height: '400px', marginRight: '25px' }}>
-                    <div>
-                        <p>a</p>
-                    </div>
+            </div>
+            < div className='coin-wrap'>
+                <div>
+                    <p>a</p>
                 </div>
-                < div style={{ flex: 1, height: '400px', marginRight: '25px' }}>
-                    <div>
-                        <p>a</p>
-                    </div>
+            </div>
+            < div className='coin-wrap'>
+                <div>
+                    <p>a</p>
                 </div>
-
-            </div >
+            </div>
+            < div className='coin-wrap'>
+                <div>
+                    <p>a</p>
+                </div>
+            </div>
+        </>
         );
     }
 }
