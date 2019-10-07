@@ -1,19 +1,25 @@
 import React, { Component } from 'react';
+import Main from "../Main/main";
+import './home.css'
 
 class Home extends Component {
 
     constructor() {
         super()
         this.stat = {
-            list: null
+            coin: []
         }
+    }
+
+    componentDidMount() {
+
     }
 
     render() {
         return (
-            <div style={{ height: '100%' }}>
-
-            </div>
+            <div className='main'>
+                <Main></Main>
+            </div >
         );
     }
 }

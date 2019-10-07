@@ -6,11 +6,11 @@
     font-weight: 100;
     font-size: 0.8rem;
     border-top: 1px solid lightgray;
-    height: 100px
+    height: 15%
 }
 
 .footer p,a{
-    font-size: 2em
+    font-size: 1em
 }
 
 .footer p:first-child {
