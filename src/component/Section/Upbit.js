@@ -20,7 +20,6 @@ class Upbit extends Component {
                 this.setState({
                     upbit: response.data
                 })
-                return response.json()
             })
             .catch(err => console.log(err));
     }

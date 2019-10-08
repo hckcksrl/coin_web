@@ -8,13 +8,13 @@ class Main extends Component {
         super()
         this.stat = {
             data: [],
-            css: ''
+            css: undefined
         }
     }
 
     render() {
         let { data, css } = this.props
-        if (data != null && css == null) {
+        if (data !== null && css === undefined) {
             return (
                 <>
                     < div className={`coin-wrap`}>
@@ -49,7 +49,7 @@ class Main extends Component {
 
 Main.propTypes = {
     data: PropTypes.object.isRequired,
-    css: PropTypes.string.isRequired
+    css: PropTypes.string
 }
 
 export default Main;

@@ -17,7 +17,7 @@ class Home extends Component {
 
     componentDidMount() {
         this.getCoin();
-        this.interval = setInterval(() => this.getCoin(), 10 * 1000);
+        this.interval = setInterval(() => this.getCoin(), 60 * 1000);
     }
 
     getCoin() {
@@ -26,7 +26,6 @@ class Home extends Component {
                 this.setState({
                     bithumb: response.data
                 })
-                return response.json()
             })
             .catch(err => console.log(err));
         axios.get("http://127.0.0.1:8000/coinone")
@@ -34,7 +33,6 @@ class Home extends Component {
                 this.setState({
                     coinone: response.data
                 })
-                return response.json()
             })
             .catch(err => console.log(err));
         axios.get("http://127.0.0.1:8000/upbit")
@@ -42,7 +40,6 @@ class Home extends Component {
                 this.setState({
                     upbit: response.data
                 })
-                return response.json()
             })
             .catch(err => console.log(err));
         axios.get("http://127.0.0.1:8000/korbit")
@@ -50,7 +47,6 @@ class Home extends Component {
                 this.setState({
                     korbit: response.data
                 })
-                return response.json()
             })
             .catch(err => console.log(err));
     }

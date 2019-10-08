@@ -21,7 +21,6 @@ class Bithumb extends Component {
                 this.setState({
                     bithumb: response.data
                 })
-                return response.json()
             })
             .catch(err => console.log(err));
     }
