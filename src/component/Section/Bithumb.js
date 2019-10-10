@@ -13,6 +13,7 @@ class Bithumb extends Component {
 
     componentDidMount() {
         this.getCoin();
+
     }
 
     getCoin() {
@@ -21,6 +22,7 @@ class Bithumb extends Component {
                 this.setState({
                     bithumb: response.data
                 })
+                return true
             })
             .catch(err => console.log(err));
     }

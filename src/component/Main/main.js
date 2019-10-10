@@ -19,7 +19,7 @@ class Main extends Component {
                 <>
                     < div className={`coin-wrap`}>
                         <div>
-                            <p>{data.currency}</p>
+                            <p>{data.korean} {data.currency}</p>
                             <p>price : {data.price} 원</p>
                             <p>high price : {data.high} 원</p>
                             <p>low price: {data.low} 원</p>
@@ -32,7 +32,7 @@ class Main extends Component {
                 <>
                     < div className={`coin-wrap ${css}`}>
                         <div>
-                            <p>{data.currency}</p>
+                            <p>{data.korean} {data.currency}</p>
                             <p>price : {data.price} 원</p>
                             <p>high price : {data.high} 원</p>
                             <p>low price: {data.low} 원</p>

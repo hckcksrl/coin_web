@@ -21,6 +21,7 @@ class Coinone extends Component {
                 this.setState({
                     coinone: response.data
                 })
+                return true
             })
             .catch(err => console.log(err));
     }

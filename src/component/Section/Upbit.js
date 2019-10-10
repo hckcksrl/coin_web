@@ -20,6 +20,7 @@ class Upbit extends Component {
                 this.setState({
                     upbit: response.data
                 })
+                return true
             })
             .catch(err => console.log(err));
     }
@@ -37,5 +38,4 @@ class Upbit extends Component {
         );
     }
 }
-
 export default Upbit;

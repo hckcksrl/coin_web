@@ -21,6 +21,7 @@ class Korbit extends Component {
                 this.setState({
                     korbit: response.data
                 })
+                return true
             })
             .catch(err => console.log(err));
     }
