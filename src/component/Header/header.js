@@ -3,6 +3,18 @@ import './header.css';
 import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
+  constructor() {
+    super()
+    this.state = {
+      name: ""
+    }
+  }
+
+  handleChange = (e) => {
+    this.setState({
+      name: e.target.value
+    });
+  }
 
   render() {
     return (
@@ -18,8 +30,15 @@ class Header extends Component {
             <NavLink to="/korbit">코빗</NavLink>
           </div>
           <div className="header-search">
-            <form className="header-form">
-              <input type="text" placeholder="Search" className="search" />
+            <form action="/search" className="header-form">
+              <input
+                type="text"
+                placeholder="ex) btc,xrp"
+                className="search"
+                name="coin_name"
+                value={this.state.name}
+                onChange={this.handleChange}
+              />
               <button className="button button4">Search</button>
             </form>
           </div>

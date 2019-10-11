@@ -8,6 +8,7 @@ import Bithumb from './component/Section/Bithumb'
 import Upbit from './component/Section/Upbit';
 import Coinone from './component/Section/Coinone';
 import Korbit from './component/Section/Korbit';
+import Search from './component/Section/Search';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/upbit' component={Upbit} />
           <Route path='/coinone' component={Coinone} />
           <Route path='/korbit' component={Korbit} />
+          <Route path='/search' component={Search} />
         </section>
         <Footer />
       </div>

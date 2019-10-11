@@ -3,6 +3,8 @@ import Main from "../Main/main";
 import axios from "axios";
 
 class Upbit extends Component {
+    _isMounted = false
+
     constructor() {
         super()
         this.state = {
@@ -11,18 +13,25 @@ class Upbit extends Component {
     }
 
     componentDidMount() {
+        this._isMounted = true
         this.getCoin();
+        this.interval = setInterval(() => this.getCoin(), 60 * 1000);
     }
 
     getCoin() {
         axios.get("http://127.0.0.1:8000/upbit")
             .then(response => {
-                this.setState({
-                    upbit: response.data
-                })
-                return true
+                if (this._isMounted) {
+                    this.setState({
+                        upbit: response.data
+                    })
+                }
             })
             .catch(err => console.log(err));
+    }
+
+    componentWillUnmount() {
+        this._isMounted = false;
     }
 
     render() {
@@ -31,7 +40,7 @@ class Upbit extends Component {
             <div className='main'>
                 <div style={{ display: 'flex', flexWrap: "wrap" }}>{
                     upbit.map((coin, index) => {
-                        return <Main data={coin} key={index} css={'upbit'}></Main>
+                        return <Main data={coin} key={index} css={'upbit'} />
                     })}
                 </div>
             </div >

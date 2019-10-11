@@ -21,27 +21,43 @@ class Main extends Component {
                         <div>
                             <p>{data.korean} {data.currency}</p>
                             <p>price : {data.price} 원</p>
-                            <p>high price : {data.high} 원</p>
-                            <p>low price: {data.low} 원</p>
-                            <p>{data.volume} 개</p>
+                            <p>high : {data.high} 원</p>
+                            <p>low : {data.low} 원</p>
+                            <p>rate : {data.rate}</p>
+                            <p>volume : {data.volume} 개</p>
                         </div>
                     </div>
                 </>)
-        } else if (data != null && css != null) {
+        } else if (data != null && css === "search") {
+            console.log(data)
             return (
-                <>
-                    < div className={`coin-wrap ${css}`}>
+                <div style={{ flexDirection: 'column', width: '250px', justifyContent: 'center', alignItems: 'center' }}>
+                    <p>{data.exchange}</p>
+                    <div className={`coin-wrap ${css}-result`}>
                         <div>
                             <p>{data.korean} {data.currency}</p>
                             <p>price : {data.price} 원</p>
-                            <p>high price : {data.high} 원</p>
-                            <p>low price: {data.low} 원</p>
-                            <p>{data.volume} 개</p>
+                            <p>high : {data.high} 원</p>
+                            <p>low : {data.low} 원</p>
+                            <p>rate : {data.rate}</p>
+                            <p>volume : {data.volume} 개</p>
+                        </div>
+                    </div>
+                </div>)
+        } else if (data != null && css != null) {
+            return (
+                <>
+                    < div className={`coin-wrap card ${css}`}>
+                        <div>
+                            <p>{data.korean} {data.currency}</p>
+                            <p>price : {data.price} 원</p>
+                            <p>high : {data.high} 원</p>
+                            <p>low : {data.low} 원</p>
+                            <p>rate : {data.rate}</p>
+                            <p>volume : {data.volume} 개</p>
                         </div>
                     </div>
                 </>)
-        } else {
-            return (<></>)
         }
 
     }

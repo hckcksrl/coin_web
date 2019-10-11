@@ -3,6 +3,7 @@ import Main from "../Main/main";
 import axios from "axios";
 
 class Korbit extends Component {
+    _isMounted = false
 
     constructor() {
         super()
@@ -12,18 +13,25 @@ class Korbit extends Component {
     }
 
     componentDidMount() {
+        this._isMounted = true
         this.getCoin();
+        this.interval = setInterval(() => this.getCoin(), 60 * 1000);
     }
 
     getCoin() {
         axios.get("http://127.0.0.1:8000/korbit")
             .then(response => {
-                this.setState({
-                    korbit: response.data
-                })
-                return true
+                if (this._isMounted) {
+                    this.setState({
+                        korbit: response.data
+                    })
+                }
             })
             .catch(err => console.log(err));
+    }
+
+    componentWillUnmount() {
+        this._isMounted = false;
     }
 
     render() {
@@ -32,7 +40,7 @@ class Korbit extends Component {
             <div className='main'>
                 <div style={{ display: 'flex', flexWrap: "wrap" }}>{
                     korbit.map((coin, index) => {
-                        return <Main data={coin} key={index} css={'korbit'}></Main>
+                        return <Main data={coin} key={index} css={'korbit'} />
                     })}
                 </div>
             </div >
