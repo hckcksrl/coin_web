@@ -20,27 +20,26 @@ class Main extends Component {
                     < div className={`coin-wrap`}>
                         <div>
                             <p>{data.korean} {data.currency}</p>
-                            <p>price : {data.price} 원</p>
-                            <p>high : {data.high} 원</p>
-                            <p>low : {data.low} 원</p>
-                            <p>rate : {data.rate}</p>
-                            <p>volume : {data.volume} 개</p>
+                            <p>price : {data.price.toLocaleString()} 원</p>
+                            <p>high : {data.high.toLocaleString()} 원</p>
+                            <p>low : {data.low.toLocaleString()} 원</p>
+                            <p style={{ color: data.rate < 0 ? "red" : "green" }}>rate : {data.rate}%</p>
+                            <p>volume : {data.volume.toLocaleString()} 개</p>
                         </div>
                     </div>
                 </>)
         } else if (data != null && css === "search") {
-            console.log(data)
             return (
                 <div style={{ flexDirection: 'column', width: '250px', justifyContent: 'center', alignItems: 'center' }}>
                     <p>{data.exchange}</p>
                     <div className={`coin-wrap ${css}-result`}>
                         <div>
                             <p>{data.korean} {data.currency}</p>
-                            <p>price : {data.price} 원</p>
-                            <p>high : {data.high} 원</p>
-                            <p>low : {data.low} 원</p>
-                            <p>rate : {data.rate}</p>
-                            <p>volume : {data.volume} 개</p>
+                            <p>price : {data.price.toLocaleString()} 원</p>
+                            <p>high : {data.high.toLocaleString()} 원</p>
+                            <p>low : {data.low.toLocaleString()} 원</p>
+                            <p style={{ color: data.rate < 0 ? "red" : "green" }}>rate : {data.rate}%</p>
+                            <p>volume : {data.volume.toLocaleString()} 개</p>
                         </div>
                     </div>
                 </div>)
@@ -50,11 +49,11 @@ class Main extends Component {
                     < div className={`coin-wrap card ${css}`}>
                         <div>
                             <p>{data.korean} {data.currency}</p>
-                            <p>price : {data.price} 원</p>
-                            <p>high : {data.high} 원</p>
-                            <p>low : {data.low} 원</p>
-                            <p>rate : {data.rate}</p>
-                            <p>volume : {data.volume} 개</p>
+                            <p>price : {data.price.toLocaleString()} 원</p>
+                            <p>high : {data.high.toLocaleString()} 원</p>
+                            <p>low : {data.low.toLocaleString()} 원</p>
+                            <p style={{ color: data.rate < 0 ? "red" : "green" }}>rate : {data.rate}%</p>
+                            <p>volume : {data.volume.toLocaleString()} 개</p>
                         </div>
                     </div>
                 </>)
