@@ -43,7 +43,7 @@ class Main extends Component {
                         </div>
                     </div>
                 </div>)
-        } else if (data != null && css != null) {
+        } else if (data != null && css != undefined) {
             return (
                 <>
                     < div className={`coin-wrap card ${css}`}>
@@ -58,7 +58,6 @@ class Main extends Component {
                     </div>
                 </>)
         }
-
     }
 }
 

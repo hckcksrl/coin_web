@@ -18,16 +18,19 @@
     height:15em;
 }
 .upbit{
-    background-color: rgba(255, 255, 255, 0.05)
+    background: rgba(0, 255, 0, 0.05);
 }
 
 .bithumb{
+    background: rgba(208, 44, 44, 0.05);
 }
 
 .coinone{
+    background: rgba(148, 105, 0, 0.05);
 }
 
 .korbit{
+    background: rgba(22, 0, 181, 0.05);
 }
 
 .search-result{
